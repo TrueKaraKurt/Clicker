@@ -21,7 +21,7 @@ public class Upgrade
             upgrareIndex = 0,
             //upgradeIcon =  ,
             upgradeBuyPrice = 10,
-            priceIncrease = 1.4f,
+            priceIncrease = 1.1f,
             upgradeProductivity = 0.1f,
         },
 
@@ -31,7 +31,7 @@ public class Upgrade
             upgrareIndex = 1,
             //upgradeIcon =  ,
             upgradeBuyPrice = 250,
-            priceIncrease = 1.4f,
+            priceIncrease = 1.1f,
             upgradeProductivity = 2.5f,
         },
 
@@ -41,7 +41,7 @@ public class Upgrade
             upgrareIndex = 2,
             //upgradeIcon =  ,
             upgradeBuyPrice = 3300,
-            priceIncrease = 1.4f,
+            priceIncrease = 1.1f,
             upgradeProductivity = 30f,
         },
 
@@ -51,7 +51,7 @@ public class Upgrade
             upgrareIndex = 3,
             //upgradeIcon =  ,
             upgradeBuyPrice = 55000,
-            priceIncrease = 1.4f,
+            priceIncrease = 1.1f,
             upgradeProductivity = 50f,
         },
     };

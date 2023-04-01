@@ -5,16 +5,34 @@ using UnityEngine;
 
 public class Incrementer
 {
-    private float _sushiCount; 
+    private float _sushiCount;
+    private float _sushiMuitiplier = 1; //временно
     public void IncreaseSushiCount()
     {
-        _sushiCount++;
+        _sushiCount += 1 * _sushiMuitiplier;
         SaveSushiCount();
+    }
+    public void IncreaseSushiCountPerSec(float sushiGain) 
+    {
+        _sushiCount += sushiGain;
     }
 
     public float GetSushiCount()
     {
         return _sushiCount;
+    }
+    public bool DecreaseSushiCount(float upgradeCost)
+    {
+        if (_sushiCount >= upgradeCost)
+        {
+            _sushiCount -= upgradeCost;
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
+        
     }
     public void SaveSushiCount()
     {
@@ -24,5 +42,11 @@ public class Incrementer
     {
         _sushiCount = PlayerPrefs.GetFloat("money");
     }
+    public void SetMultiplier(int multip)
+    {
+        _sushiMuitiplier = multip;
+    }
+
+
 
 }

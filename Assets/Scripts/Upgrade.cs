@@ -5,6 +5,7 @@ using UnityEngine;
 public struct UpgradeData
 {
     public string upgradeName;
+    public int upgrareIndex;
     public Sprite upgradeIcon;
     public int upgradeBuyPrice;
     public float priceIncrease;
@@ -17,6 +18,7 @@ public class Upgrade
         new UpgradeData
         {
             upgradeName = "Knife",
+            upgrareIndex = 0,
             //upgradeIcon =  ,
             upgradeBuyPrice = 10,
             priceIncrease = 1.4f,
@@ -26,6 +28,7 @@ public class Upgrade
         new UpgradeData
         {
             upgradeName = "Chinese worker",
+            upgrareIndex = 1,
             //upgradeIcon =  ,
             upgradeBuyPrice = 250,
             priceIncrease = 1.4f,
@@ -35,6 +38,7 @@ public class Upgrade
         new UpgradeData
         {
             upgradeName = "Sushi restaurant",
+            upgrareIndex = 2,
             //upgradeIcon =  ,
             upgradeBuyPrice = 3300,
             priceIncrease = 1.4f,
@@ -44,10 +48,11 @@ public class Upgrade
         new UpgradeData
         {
             upgradeName = "Sushi factory",
+            upgrareIndex = 3,
             //upgradeIcon =  ,
-            upgradeBuyPrice = 3300,
+            upgradeBuyPrice = 55000,
             priceIncrease = 1.4f,
-            upgradeProductivity = 30f,
+            upgradeProductivity = 50f,
         },
     };
 }

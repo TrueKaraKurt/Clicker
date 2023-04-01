@@ -1,18 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Incrementer : MonoBehaviour
+
+public class Incrementer
 {
-    [SerializeField] private int _sushiCount;
-    [SerializeField] private Text _sushiCountDisplay;
+    private float _sushiCount; 
     public void IncreaseSushiCount()
     {
         _sushiCount++;
+        SaveSushiCount();
     }
-    private void Update()
+
+    public float GetSushiCount()
     {
-        _sushiCountDisplay.text = _sushiCount.ToString();
+        return _sushiCount;
     }
+    public void SaveSushiCount()
+    {
+        PlayerPrefs.SetFloat("money", _sushiCount);
+    }
+    public void LoadSushiCount()
+    {
+        _sushiCount = PlayerPrefs.GetFloat("money");
+    }
+
 }

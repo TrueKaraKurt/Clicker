@@ -7,14 +7,12 @@ public class Incrementer : MonoBehaviour
 {
     [SerializeField] private int _sushiCount;
     [SerializeField] private Text _sushiCountDisplay;
-
-    public void OnSushiClick() 
-    {
-        IncreaseSushiCount();
-    }
-
-    private void IncreaseSushiCount()
+    public void IncreaseSushiCount()
     {
         _sushiCount++;
+    }
+    private void Update()
+    {
+        _sushiCountDisplay.text = _sushiCount.ToString();
     }
 }

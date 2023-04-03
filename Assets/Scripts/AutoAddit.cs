@@ -42,7 +42,7 @@ public class AutoAddit : MonoBehaviour
 
         for (int i = 0; i < Upgrade.updates.Count; i++)
         {
-            int currentPrice = Upgrade.updates[i].upgradeBuyPrice;
+            long currentPrice = Upgrade.updates[i].upgradeBuyPrice;
             float temp = currentPrice + (currentPrice * Upgrade.updates[i].priceIncrease * _upgradeCount[i]);
             _upgradeCost[i].text = temp.ToString();
         }
@@ -65,7 +65,7 @@ public class AutoAddit : MonoBehaviour
     private float CalcActualPrice(int index) 
     {
         float temp;
-        int currentPrice = Upgrade.updates[index].upgradeBuyPrice;
+        long currentPrice = Upgrade.updates[index].upgradeBuyPrice;
         if (_upgradeCount[index] == 0)
         {
             temp = currentPrice;
@@ -109,9 +109,5 @@ public class AutoAddit : MonoBehaviour
             incrementer.IncreaseSushiCountPerSec(SushiPerSecond());
             yield return new WaitForSeconds(1);
         }
-    }
-    public void SetMiltiplier(int multip)
-    {
-        incrementer.SetMultiplier(multip);
     }
 }

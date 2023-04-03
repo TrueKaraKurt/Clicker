@@ -6,10 +6,9 @@ using UnityEngine;
 public class Incrementer
 {
     private float _sushiCount;
-    private float _sushiMuitiplier = 1; //временно
     public void IncreaseSushiCount()
     {
-        _sushiCount += 1 * _sushiMuitiplier;
+        _sushiCount++;
         SaveSushiCount();
     }
     public void IncreaseSushiCountPerSec(float sushiGain) 
@@ -41,10 +40,6 @@ public class Incrementer
     public void LoadSushiCount()
     {
         _sushiCount = PlayerPrefs.GetFloat("money");
-    }
-    public void SetMultiplier(int multip)
-    {
-        _sushiMuitiplier = multip;
     }
 
 

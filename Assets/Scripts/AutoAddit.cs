@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,14 +38,14 @@ public class AutoAddit : MonoBehaviour
         _upgradeCount = new int[Upgrade.updates.Count];
         for (int i = 0; i < _upgradeCount.Length; i++)
         {
-            _upgradeCountDisplay[i].text = _upgradeCount[i].ToString();
+            _upgradeCountDisplay[i].text = _upgradeCount[i].ToString("G30");
         }
 
         for (int i = 0; i < Upgrade.updates.Count; i++)
         {
-            long currentPrice = Upgrade.updates[i].upgradeBuyPrice;
-            float temp = currentPrice + (currentPrice * Upgrade.updates[i].priceIncrease * _upgradeCount[i]);
-            _upgradeCost[i].text = temp.ToString();
+            decimal currentPrice = Upgrade.updates[i].upgradeBuyPrice;
+            decimal temp = currentPrice + (currentPrice * Upgrade.updates[i].priceIncrease * _upgradeCount[i]);
+            _upgradeCost[i].text = temp.ToString("G30");
         }
     }
     private void DisplayNewPrice() 
@@ -62,10 +63,10 @@ public class AutoAddit : MonoBehaviour
     {
 
     }
-    private float CalcActualPrice(int index) 
+    private decimal CalcActualPrice(int index) 
     {
-        float temp;
-        long currentPrice = Upgrade.updates[index].upgradeBuyPrice;
+        decimal temp;
+        decimal currentPrice = Upgrade.updates[index].upgradeBuyPrice;
         if (_upgradeCount[index] == 0)
         {
             temp = currentPrice;
@@ -79,7 +80,7 @@ public class AutoAddit : MonoBehaviour
 
     public void UpgradeBuying(int index) 
     {
-        float temp = CalcActualPrice(index);
+        decimal temp = CalcActualPrice(index);
         if (incrementer.DecreaseSushiCount(temp))
         {
             _upgradeCount[index]++;
@@ -87,16 +88,17 @@ public class AutoAddit : MonoBehaviour
 
             temp = CalcActualPrice(index);
 
-            _upgradeCost[index].text = temp.ToString();
-            _upgradeCountDisplay[index].text = _upgradeCount[index].ToString();
+            _upgradeCost[index].text = temp.ToString("G30");
+            Debug.Log(Convert.ToDecimal(Upgrade.updates[29].upgradeBuyPrice).ToLongNumberdDisplayer());
+            _upgradeCountDisplay[index].text = _upgradeCount[index].ToString("G30");
         }
     }
-    private float SushiPerSecond() 
+    private decimal SushiPerSecond() 
     {
-        float totalSushiPerSecond = 0;
+        decimal totalSushiPerSecond = 0;
         for (int i = 0; i < _upgradeCount.Length; i++)
         {
-            float temp = Upgrade.updates[i].upgradeProductivity;
+            decimal temp = Convert.ToDecimal(Upgrade.updates[i].upgradeProductivity);
             totalSushiPerSecond += _upgradeCount[i] * temp;
         }
 
@@ -110,4 +112,5 @@ public class AutoAddit : MonoBehaviour
             yield return new WaitForSeconds(1);
         }
     }
+    
 }

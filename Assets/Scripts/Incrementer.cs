@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,22 +6,22 @@ using UnityEngine;
 
 public class Incrementer
 {
-    private float _sushiCount;
+    private decimal _sushiCount;
     public void IncreaseSushiCount()
     {
         _sushiCount++;
         SaveSushiCount();
     }
-    public void IncreaseSushiCountPerSec(float sushiGain) 
+    public void IncreaseSushiCountPerSec(decimal sushiGain) 
     {
         _sushiCount += sushiGain;
     }
 
-    public float GetSushiCount()
+    public decimal GetSushiCount()
     {
         return _sushiCount;
     }
-    public bool DecreaseSushiCount(float upgradeCost)
+    public bool DecreaseSushiCount(decimal upgradeCost)
     {
         if (_sushiCount >= upgradeCost)
         {
@@ -35,11 +36,11 @@ public class Incrementer
     }
     public void SaveSushiCount()
     {
-        PlayerPrefs.SetFloat("money", _sushiCount);
+        PlayerPrefs.SetFloat("money",(float)_sushiCount);
     }
     public void LoadSushiCount()
     {
-        _sushiCount = PlayerPrefs.GetFloat("money");
+        _sushiCount = Convert.ToDecimal(PlayerPrefs.GetFloat("money"));
     }
 
 

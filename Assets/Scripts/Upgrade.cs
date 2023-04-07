@@ -26,7 +26,7 @@ public class Upgrade
         },
         new UpgradeData
         {
-            upgradeName = "Chinese worker",
+            upgradeName = "Home cook",
             upgrareIndex = 1,
             //upgradeIcon =  ,
             upgradeBuyPrice = 100,
@@ -116,7 +116,7 @@ public class Upgrade
         },
         new UpgradeData
         {
-            upgradeName = "Electton sushi",
+            upgradeName = "Electron sushi",
             upgrareIndex = 11,
             //upgradeIcon =  ,
             upgradeBuyPrice = 15000000,

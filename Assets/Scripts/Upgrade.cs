@@ -8,14 +8,15 @@ public struct UpgradeData
 {
     public string upgradeName;
     public int upgrareIndex;
-    public Sprite upgradeIcon;
+    //public Sprite upgradeIcon;
     public decimal upgradeBuyPrice;
     public decimal priceIncrease;
-    public float upgradeProductivity;
+    public decimal upgradeProductivity;
 }
-public class Upgrade
+public static class Upgrade
 {
-    public static List<UpgradeData> updates = new List<UpgradeData>()
+    public static List<UpgradeData> updates => _updates;
+    private static List<UpgradeData> _updates = new List<UpgradeData>()
     {
         new UpgradeData
         {
@@ -24,7 +25,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 10,
             priceIncrease = 1.1m,
-            upgradeProductivity = 0.1f,
+            upgradeProductivity = 0.1m,
         },
         new UpgradeData
         {
@@ -33,7 +34,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 100,
             priceIncrease = 1.1m,
-            upgradeProductivity = 0.3f,
+            upgradeProductivity = 0.3m,
         },
         new UpgradeData
         {
@@ -42,7 +43,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 500,
             priceIncrease = 1.1m,
-            upgradeProductivity = 0.5f,
+            upgradeProductivity = 0.5m,
         },
         new UpgradeData
         {
@@ -51,7 +52,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 2000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 1f,
+            upgradeProductivity = 1m,
         },
         new UpgradeData
         {
@@ -60,7 +61,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 10000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 3f,
+            upgradeProductivity = 3m,
         },
         new UpgradeData
         {
@@ -69,7 +70,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 50000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 10f,
+            upgradeProductivity = 10m,
         },
         new UpgradeData
         {
@@ -78,7 +79,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 200000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 20f,
+            upgradeProductivity = 20m,
         },
         new UpgradeData
         {
@@ -87,7 +88,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 500000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 40f,
+            upgradeProductivity = 40m,
         },
         new UpgradeData
         {
@@ -96,7 +97,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 1500000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 100f,
+            upgradeProductivity = 100m,
         },
         new UpgradeData
         {
@@ -105,7 +106,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 1500000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 100f,
+            upgradeProductivity = 100m,
         },
         new UpgradeData
         {
@@ -114,7 +115,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 5000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 300f,
+            upgradeProductivity = 300m,
         },
         new UpgradeData
         {
@@ -123,7 +124,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 15000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 800f,
+            upgradeProductivity = 800m,
         },
         new UpgradeData
         {
@@ -132,7 +133,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 30000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 1500f,
+            upgradeProductivity = 1500m,
         },
         new UpgradeData
         {
@@ -141,7 +142,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 100000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 3000f,
+            upgradeProductivity = 3000m,
         },
         new UpgradeData
         {
@@ -150,7 +151,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 300000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 5000f,
+            upgradeProductivity = 5000m,
         },
         new UpgradeData
         {
@@ -159,7 +160,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 1000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 10000f,
+            upgradeProductivity = 10000m,
         },
         new UpgradeData
         {
@@ -168,7 +169,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 2500000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 20000f,
+            upgradeProductivity = 20000m,
         },
         new UpgradeData
         {
@@ -177,7 +178,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 10000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 30000f,
+            upgradeProductivity = 30000m,
         },
         new UpgradeData
         {
@@ -186,7 +187,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 20000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 50000f,
+            upgradeProductivity = 50000m,
         },
         new UpgradeData
         {
@@ -195,7 +196,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 40000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 75000f,
+            upgradeProductivity = 75000m,
         },
         new UpgradeData
         {
@@ -204,7 +205,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 60000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 100000f,
+            upgradeProductivity = 100000m,
         },
         new UpgradeData
         {
@@ -213,7 +214,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 100000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 150000f,
+            upgradeProductivity = 150000m,
         },
         new UpgradeData
         {
@@ -222,7 +223,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 250000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 300000f,
+            upgradeProductivity = 300000m,
         },
         new UpgradeData
         {
@@ -231,7 +232,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 500000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 500000f,
+            upgradeProductivity = 500000m,
         },
         new UpgradeData
         {
@@ -240,7 +241,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 1000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 750000f,
+            upgradeProductivity = 750000m,
         },
         new UpgradeData
         {
@@ -249,7 +250,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 1500000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 1000000f,
+            upgradeProductivity = 1000000m,
         },
         new UpgradeData
         {
@@ -258,7 +259,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 3000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 1500000f,
+            upgradeProductivity = 1500000m,
         },
         new UpgradeData
         {
@@ -267,7 +268,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 7500000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 3000000f,
+            upgradeProductivity = 3000000m,
         },
         new UpgradeData
         {
@@ -276,7 +277,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 20000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 5000000f,
+            upgradeProductivity = 5000000m,
         },
         new UpgradeData
         {
@@ -285,7 +286,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 50000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 7500000f,
+            upgradeProductivity = 7500000m,
         },
         new UpgradeData
         {
@@ -294,7 +295,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 100000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 10000000f,
+            upgradeProductivity = 10000000m,
         },
         new UpgradeData
         {
@@ -303,7 +304,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 300000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 15000000f,
+            upgradeProductivity = 15000000m,
         },
         new UpgradeData
         {
@@ -312,7 +313,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 1000000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 20000000f,
+            upgradeProductivity = 20000000m,
         },
         new UpgradeData
         {
@@ -321,7 +322,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 2000000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 30000000f,
+            upgradeProductivity = 30000000m,
         },
         new UpgradeData
         {
@@ -330,7 +331,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 5000000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 50000000f,
+            upgradeProductivity = 50000000m,
         },
         new UpgradeData
         {
@@ -339,7 +340,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 10000000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 75000000f,
+            upgradeProductivity = 75000000m,
         },
         new UpgradeData
         {
@@ -348,7 +349,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 20000000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 100000000f,
+            upgradeProductivity = 100000000m,
         },
         new UpgradeData
         {
@@ -357,7 +358,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 30000000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 125000000f,
+            upgradeProductivity = 125000000m,
         },
         new UpgradeData
         {
@@ -366,7 +367,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 50000000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 150000000f,
+            upgradeProductivity = 150000000m,
         },
         new UpgradeData
         {
@@ -375,7 +376,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 150000000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 300000000f,
+            upgradeProductivity = 300000000m,
         },
         new UpgradeData
         {
@@ -384,7 +385,7 @@ public class Upgrade
             //upgradeIcon =  ,
             upgradeBuyPrice = 1000000000000000000,
             priceIncrease = 1.1m,
-            upgradeProductivity = 1000000000f,
+            upgradeProductivity = 1000000000m,
         },
     };
 }

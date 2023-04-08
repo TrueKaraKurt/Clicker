@@ -12,16 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7fe07d1b164f246a64d347e44e1ab9, type: 3}
   m_Name: UpgradesData
   m_EditorClassIdentifier: 
-  _upgradeData:
-  - upgradeName: 
-    upgrareIndex: 0
-    upgradeIcon: {fileID: 0}
-    upgradeProductivity: 0
-  - upgradeName: 
-    upgrareIndex: 0
-    upgradeIcon: {fileID: 0}
-    upgradeProductivity: 0
-  - upgradeName: 
-    upgrareIndex: 0
-    upgradeIcon: {fileID: 0}
-    upgradeProductivity: 0
+  _upgradeData: []

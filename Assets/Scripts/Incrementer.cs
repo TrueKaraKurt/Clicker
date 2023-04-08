@@ -4,8 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Incrementer
+public class Incrementer : MonoBehaviour
 {
+    public static Incrementer Instance => _instance;
+    private static Incrementer _instance;
+    private void Awake()
+    {
+        _instance = this;
+    } 
+
     private decimal _sushiCount;
     public void IncreaseSushiCount()
     {

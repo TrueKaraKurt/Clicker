@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AutoAddit : MonoBehaviour
 {
-    [SerializeField] private Text _sushiCountDisplay;
+    [SerializeField] private TextMeshProUGUI _sushiCountDisplay;
 
     [SerializeField] private Transform _parantPrefab;
     [SerializeField] private List<PrefabPersonalData> _upgrades;
@@ -103,30 +104,36 @@ public class AutoAddit : MonoBehaviour
 
         return data;
     }
-    private int[] DecompressString(string str)
+    private bool DecompressString(string str, out int[] array)
     {
         //[0:0,1:1,2:0,3:0,4:1,5:0,6:0,7:1,8:0]
-        if (str == "")
-            return null;
         List<int> list = new List<int>();
-        string number = "";
-        for (int i = 0; i < str.Length; i++)
+        array = new int[] { };
+        if (str != "")
         {
-            if (str[i] == '[' || str[i] == ':')
+            string number = "";
+            for (int i = 0; i < str.Length; i++)
             {
-                number = "";
-                continue;
+                if (str[i] == '[' || str[i] == ':')
+                {
+                    number = "";
+                    continue;
+                }
+                if (str[i] == ',' || str[i] == ']')
+                {
+                    list.Add(Convert.ToInt32(number));
+                    number = "";
+                }
+                number += str[i];
             }
-            if (str[i] == ',' || str[i] == ']')
-            {
-                list.Add(Convert.ToInt32(number));
-                number = "";
-            }
-            number += str[i];
+            array = list.ToArray();
+            return true;
         }
-        int[] data = list.ToArray();
-
-        return data;
+        else
+        {
+            return false;
+        }
+        
     }
     private void SaveUpgrade()
     {
@@ -135,7 +142,10 @@ public class AutoAddit : MonoBehaviour
     }
     private void LoadUpgrade()
     {
-        _upgradeCount = DecompressString(PlayerPrefs.GetString("upgradeCount"));
+        if (DecompressString(PlayerPrefs.GetString("upgradeCount"), out int[] upgradeCount))
+        {
+            _upgradeCount = upgradeCount;
+        }
         //Debug.Log("load succsess - " + _upgradeCount);
     }
 }

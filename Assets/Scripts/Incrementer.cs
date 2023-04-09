@@ -49,7 +49,4 @@ public class Incrementer : MonoBehaviour
     {
         _sushiCount = Convert.ToDecimal(PlayerPrefs.GetFloat("money"));
     }
-
-
-
 }

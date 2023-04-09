@@ -57,7 +57,7 @@ public class PrefabPersonalData : MonoBehaviour
         }
         else
         {
-            temp = currentPrice * (decimal)Math.Pow((double)_priceIncrease, upgradeCount - 1);
+            temp = Math.Floor(currentPrice * (decimal)Math.Pow((double)_priceIncrease, upgradeCount - 1));
         }
         return temp;
     }

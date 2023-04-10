@@ -14,9 +14,9 @@ public class Incrementer : MonoBehaviour
     } 
 
     private decimal _sushiCount;
-    public void IncreaseSushiCount()
+    public void IncreaseSushiCount(decimal inputSishi = 1m)
     {
-        _sushiCount++;
+        _sushiCount+= inputSishi;
         SaveSushiCount();
     }
     public void IncreaseSushiCountPerSec(decimal sushiGain) 
@@ -48,5 +48,10 @@ public class Incrementer : MonoBehaviour
     public void LoadSushiCount()
     {
         _sushiCount = Convert.ToDecimal(PlayerPrefs.GetFloat("money"));
+    }
+    public void ResetSushiCount()
+    {
+        PlayerPrefs.DeleteKey("money");
+        _sushiCount = 0;
     }
 }

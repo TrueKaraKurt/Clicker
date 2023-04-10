@@ -148,4 +148,11 @@ public class AutoAddit : MonoBehaviour
         }
         //Debug.Log("load succsess - " + _upgradeCount);
     }
+    public void ResetUpgrades()
+    {
+        PlayerPrefs.DeleteKey("upgradeCount");
+        _upgradeCount = new int[Upgrade.updates.Count];
+        Debug.Log(_upgradeCount[1]);
+        InitializationUpgradeKit();
+    }
 }

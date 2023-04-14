@@ -24,7 +24,7 @@ public static class Upgrade
             upgrareIndex = 0,
             //upgradeIcon =  ,
             upgradeBuyPrice = 10,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 0.1m,
         },
         new UpgradeData
@@ -33,7 +33,7 @@ public static class Upgrade
             upgrareIndex = 1,
             //upgradeIcon =  ,
             upgradeBuyPrice = 100,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 0.3m,
         },
         new UpgradeData
@@ -42,7 +42,7 @@ public static class Upgrade
             upgrareIndex = 2,
             //upgradeIcon =  ,
             upgradeBuyPrice = 500,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 0.5m,
         },
         new UpgradeData
@@ -51,7 +51,7 @@ public static class Upgrade
             upgrareIndex = 3,
             //upgradeIcon =  ,
             upgradeBuyPrice = 2000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 1m,
         },
         new UpgradeData
@@ -60,7 +60,7 @@ public static class Upgrade
             upgrareIndex = 4,
             //upgradeIcon =  ,
             upgradeBuyPrice = 10000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 3m,
         },
         new UpgradeData
@@ -69,7 +69,7 @@ public static class Upgrade
             upgrareIndex = 5,
             //upgradeIcon =  ,
             upgradeBuyPrice = 50000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 10m,
         },
         new UpgradeData
@@ -78,7 +78,7 @@ public static class Upgrade
             upgrareIndex = 6,
             //upgradeIcon =  ,
             upgradeBuyPrice = 200000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 20m,
         },
         new UpgradeData
@@ -87,7 +87,7 @@ public static class Upgrade
             upgrareIndex = 7,
             //upgradeIcon =  ,
             upgradeBuyPrice = 500000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 40m,
         },
         new UpgradeData
@@ -96,7 +96,7 @@ public static class Upgrade
             upgrareIndex = 8,
             //upgradeIcon =  ,
             upgradeBuyPrice = 1500000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 100m,
         },
         new UpgradeData
@@ -105,7 +105,7 @@ public static class Upgrade
             upgrareIndex = 9,
             //upgradeIcon =  ,
             upgradeBuyPrice = 1500000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 100m,
         },
         new UpgradeData
@@ -114,7 +114,7 @@ public static class Upgrade
             upgrareIndex = 10,
             //upgradeIcon =  ,
             upgradeBuyPrice = 5000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 300m,
         },
         new UpgradeData
@@ -123,7 +123,7 @@ public static class Upgrade
             upgrareIndex = 11,
             //upgradeIcon =  ,
             upgradeBuyPrice = 15000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 800m,
         },
         new UpgradeData
@@ -132,7 +132,7 @@ public static class Upgrade
             upgrareIndex = 12,
             //upgradeIcon =  ,
             upgradeBuyPrice = 30000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 1500m,
         },
         new UpgradeData
@@ -141,7 +141,7 @@ public static class Upgrade
             upgrareIndex = 13,
             //upgradeIcon =  ,
             upgradeBuyPrice = 100000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 3000m,
         },
         new UpgradeData
@@ -150,7 +150,7 @@ public static class Upgrade
             upgrareIndex = 14,
             //upgradeIcon =  ,
             upgradeBuyPrice = 300000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 5000m,
         },
         new UpgradeData
@@ -159,7 +159,7 @@ public static class Upgrade
             upgrareIndex = 15,
             //upgradeIcon =  ,
             upgradeBuyPrice = 1000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 10000m,
         },
         new UpgradeData
@@ -168,7 +168,7 @@ public static class Upgrade
             upgrareIndex = 16,
             //upgradeIcon =  ,
             upgradeBuyPrice = 2500000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 20000m,
         },
         new UpgradeData
@@ -177,7 +177,7 @@ public static class Upgrade
             upgrareIndex = 17,
             //upgradeIcon =  ,
             upgradeBuyPrice = 10000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 30000m,
         },
         new UpgradeData
@@ -186,7 +186,7 @@ public static class Upgrade
             upgrareIndex = 18,
             //upgradeIcon =  ,
             upgradeBuyPrice = 20000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 50000m,
         },
         new UpgradeData
@@ -195,7 +195,7 @@ public static class Upgrade
             upgrareIndex = 19,
             //upgradeIcon =  ,
             upgradeBuyPrice = 40000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 75000m,
         },
         new UpgradeData
@@ -204,7 +204,7 @@ public static class Upgrade
             upgrareIndex = 20,
             //upgradeIcon =  ,
             upgradeBuyPrice = 60000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 100000m,
         },
         new UpgradeData
@@ -213,7 +213,7 @@ public static class Upgrade
             upgrareIndex = 21,
             //upgradeIcon =  ,
             upgradeBuyPrice = 100000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 150000m,
         },
         new UpgradeData
@@ -222,7 +222,7 @@ public static class Upgrade
             upgrareIndex = 22,
             //upgradeIcon =  ,
             upgradeBuyPrice = 250000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 300000m,
         },
         new UpgradeData
@@ -231,7 +231,7 @@ public static class Upgrade
             upgrareIndex = 23,
             //upgradeIcon =  ,
             upgradeBuyPrice = 500000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 500000m,
         },
         new UpgradeData
@@ -240,7 +240,7 @@ public static class Upgrade
             upgrareIndex = 24,
             //upgradeIcon =  ,
             upgradeBuyPrice = 1000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 750000m,
         },
         new UpgradeData
@@ -249,7 +249,7 @@ public static class Upgrade
             upgrareIndex = 25,
             //upgradeIcon =  ,
             upgradeBuyPrice = 1500000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 1000000m,
         },
         new UpgradeData
@@ -258,7 +258,7 @@ public static class Upgrade
             upgrareIndex = 26,
             //upgradeIcon =  ,
             upgradeBuyPrice = 3000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 1500000m,
         },
         new UpgradeData
@@ -267,7 +267,7 @@ public static class Upgrade
             upgrareIndex = 27,
             //upgradeIcon =  ,
             upgradeBuyPrice = 7500000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 3000000m,
         },
         new UpgradeData
@@ -276,7 +276,7 @@ public static class Upgrade
             upgrareIndex = 28,
             //upgradeIcon =  ,
             upgradeBuyPrice = 20000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 5000000m,
         },
         new UpgradeData
@@ -285,7 +285,7 @@ public static class Upgrade
             upgrareIndex = 29,
             //upgradeIcon =  ,
             upgradeBuyPrice = 50000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 7500000m,
         },
         new UpgradeData
@@ -294,7 +294,7 @@ public static class Upgrade
             upgrareIndex = 30,
             //upgradeIcon =  ,
             upgradeBuyPrice = 100000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 10000000m,
         },
         new UpgradeData
@@ -303,7 +303,7 @@ public static class Upgrade
             upgrareIndex = 31,
             //upgradeIcon =  ,
             upgradeBuyPrice = 300000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 15000000m,
         },
         new UpgradeData
@@ -312,7 +312,7 @@ public static class Upgrade
             upgrareIndex = 32,
             //upgradeIcon =  ,
             upgradeBuyPrice = 1000000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 20000000m,
         },
         new UpgradeData
@@ -321,7 +321,7 @@ public static class Upgrade
             upgrareIndex = 33,
             //upgradeIcon =  ,
             upgradeBuyPrice = 2000000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 30000000m,
         },
         new UpgradeData
@@ -330,7 +330,7 @@ public static class Upgrade
             upgrareIndex = 34,
             //upgradeIcon =  ,
             upgradeBuyPrice = 5000000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 50000000m,
         },
         new UpgradeData
@@ -339,7 +339,7 @@ public static class Upgrade
             upgrareIndex = 35,
             //upgradeIcon =  ,
             upgradeBuyPrice = 10000000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 75000000m,
         },
         new UpgradeData
@@ -348,7 +348,7 @@ public static class Upgrade
             upgrareIndex = 36,
             //upgradeIcon =  ,
             upgradeBuyPrice = 20000000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 100000000m,
         },
         new UpgradeData
@@ -357,7 +357,7 @@ public static class Upgrade
             upgrareIndex = 37,
             //upgradeIcon =  ,
             upgradeBuyPrice = 30000000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 125000000m,
         },
         new UpgradeData
@@ -366,7 +366,7 @@ public static class Upgrade
             upgrareIndex = 38,
             //upgradeIcon =  ,
             upgradeBuyPrice = 50000000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 150000000m,
         },
         new UpgradeData
@@ -375,7 +375,7 @@ public static class Upgrade
             upgrareIndex = 39,
             //upgradeIcon =  ,
             upgradeBuyPrice = 150000000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 300000000m,
         },
         new UpgradeData
@@ -384,7 +384,7 @@ public static class Upgrade
             upgrareIndex = 40,
             //upgradeIcon =  ,
             upgradeBuyPrice = 1000000000000000000,
-            priceIncrease = 1.1m,
+            priceIncrease = 1.2m,
             upgradeProductivity = 1000000000m,
         },
     };

@@ -6,19 +6,11 @@ using UnityEngine;
 
 public class KnifeMove : MonoBehaviour
 {
-    private void Start()
-    {
-        KnifeAnimation(() => Debug.Log("pass"));
-    }
 
-    private void Update()
+    private void KnifeAnimation()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            KnifeAnimation(() => Debug.Log("pay respect"));
-        }
-    }
 
+    }
     /*private void KnifeAnimation()
     {
         transform.DOLocalMove(Vector3.zero, 1)
@@ -26,10 +18,10 @@ public class KnifeMove : MonoBehaviour
             KnifeAnimation();
             Debug.Log("pass");
         })).SetEase(Ease.OutQuint).OnUpdate(()=> Debug.Log(transform.localPosition.y));
-    }*/
+    }
     private void KnifeAnimation(Action callback)
     {
         transform.DOLocalMove(Vector3.zero, 1)
         .OnComplete(()=> callback?.Invoke());
-    }
+    }*/
 }

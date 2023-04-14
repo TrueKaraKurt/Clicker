@@ -2805,6 +2805,7 @@ GameObject:
   - component: {fileID: 598526488}
   - component: {fileID: 598526489}
   - component: {fileID: 598526490}
+  - component: {fileID: 598526491}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -2935,6 +2936,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67812fa0e78d0854b87ba49cb3aada2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &598526491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598526484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badc6cc722b0b1f4c824c05678e98d0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 414790354903072117, guid: 3b783b74537c6a24ca2e4268b0e714ef, type: 3}
+  _parentPrefab: {fileID: 753061752}
 --- !u!1 &602405241
 GameObject:
   m_ObjectHideFlags: 0
@@ -3331,6 +3346,41 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5894732301693228961, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
   m_PrefabInstance: {fileID: 1919053844}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &753061751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 753061752}
+  m_Layer: 5
+  m_Name: KnifeContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &753061752
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753061751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 999801852}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &781673179 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5894732301693228960, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
@@ -4520,7 +4570,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -4718,6 +4768,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 602405242}
+  - {fileID: 753061752}
   m_Father: {fileID: 1538627230}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4790,8 +4841,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 79d82620930e24d4288127968589ff12, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8128,6 +8179,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3561716093780907282, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952778203156322445, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952778203156322445, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952778203156322445, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 598526491}
+    - target: {fileID: 1952778203156322445, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952778203156322445, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: KnifeCreate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952778203156322445, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: KnifeManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952778203156322445, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5894732301693228960, guid: cc776e2e1e98ad949a645a35a3734343, type: 3}

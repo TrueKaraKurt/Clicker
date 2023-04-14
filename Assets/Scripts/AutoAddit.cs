@@ -13,10 +13,13 @@ public class AutoAddit : MonoBehaviour
     [SerializeField] private Transform _parantPrefab;
     [SerializeField] private List<PrefabPersonalData> _upgrades;
 
+    public static event Action<int> OnKnifeUpgradeBuying; 
+
     private int[] _upgradeCount;
 
     public static AutoAddit Instance => _instance;
     private static AutoAddit _instance;
+
     private void Awake()
     {
         _instance = this;
@@ -152,7 +155,12 @@ public class AutoAddit : MonoBehaviour
     {
         PlayerPrefs.DeleteKey("upgradeCount");
         _upgradeCount = new int[Upgrade.updates.Count];
-        Debug.Log(_upgradeCount[1]);
         InitializationUpgradeKit();
+    }
+
+    public int PassKnifeCount()
+    {
+        LoadUpgrade();
+        return _upgradeCount[0];
     }
 }

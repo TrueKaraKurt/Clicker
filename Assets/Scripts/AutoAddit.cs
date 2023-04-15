@@ -13,8 +13,9 @@ public class AutoAddit : MonoBehaviour
     [SerializeField] private Transform _parantPrefab;
     [SerializeField] private List<PrefabPersonalData> _upgrades;
 
-    public static event Action<int> OnKnifeUpgradeBuying; 
-
+    public static event Action OnKnifeUpgradeBuying;
+    public static event Action<int> OnfirstKnifeCreate;
+    
     private int[] _upgradeCount;
 
     public static AutoAddit Instance => _instance;
@@ -31,6 +32,8 @@ public class AutoAddit : MonoBehaviour
         InitializationUpgradeKit();
         StartCoroutine(AutoSushiGain());
         DisplayData();
+
+        InitKnifeCount();
     }
 
     private void Update()
@@ -69,6 +72,11 @@ public class AutoAddit : MonoBehaviour
     public void AddDataToUpgradeCountArray(int index) 
     {
         _upgradeCount[index]++;
+        SaveUpgrade();
+        if (index == 0)
+        {
+            OnKnifeUpgradeBuying?.Invoke();
+        }
     }
     public int GetUpgradeCount(int index) 
     {
@@ -91,7 +99,6 @@ public class AutoAddit : MonoBehaviour
         while (true)
         {
             Incrementer.Instance.IncreaseSushiCountPerSec(SushiPerSecond());
-            SaveUpgrade();
             DisplayData();
             Incrementer.Instance.SaveSushiCount();
             yield return new WaitForSeconds(1);
@@ -141,7 +148,6 @@ public class AutoAddit : MonoBehaviour
     private void SaveUpgrade()
     {
         PlayerPrefs.SetString("upgradeCount", CompressString(_upgradeCount));
-        //Debug.Log("save succsess - " + PlayerPrefs.GetString("upgradeCount"));
     }
     private void LoadUpgrade()
     {
@@ -158,9 +164,9 @@ public class AutoAddit : MonoBehaviour
         InitializationUpgradeKit();
     }
 
-    public int PassKnifeCount()
+    private void InitKnifeCount()
     {
         LoadUpgrade();
-        return _upgradeCount[0];
+        OnfirstKnifeCreate?.Invoke(_upgradeCount[0]);
     }
 }

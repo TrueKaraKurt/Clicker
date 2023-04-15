@@ -51,14 +51,7 @@ public class PrefabPersonalData : MonoBehaviour
     {
         decimal temp;
         decimal currentPrice = _upgradeBuyPrice;
-        if (upgradeCount == 0)
-        {
-            temp = currentPrice;
-        }
-        else
-        {
-            temp = Math.Floor(currentPrice * (decimal)Math.Pow((double)_priceIncrease, upgradeCount - 1));
-        }
+        temp = Math.Floor(currentPrice * (decimal)Math.Pow((double)_priceIncrease, upgradeCount));
         return temp;
     }
 

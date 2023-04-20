@@ -13,7 +13,6 @@ public class KnifeManager : MonoBehaviour
     private float _radius = 300f;
     private Coroutine _pingTiming;
     private List<Sequence> _standsForKnives;
-    private List<Tweener> _knifesAnimation;
 
     private List<GameObject> _flyingKnifes;
 
@@ -49,6 +48,7 @@ public class KnifeManager : MonoBehaviour
             SetCoordinatesOnListObject(i);
         }
         _pingTiming = StartCoroutine(KnifePing());
+
     }
     private void AddKnife()
     {

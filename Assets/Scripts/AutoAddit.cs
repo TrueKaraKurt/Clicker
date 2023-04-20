@@ -38,7 +38,7 @@ public class AutoAddit : MonoBehaviour
 
     private void Update()
     {
-        _sushiCountDisplay.text = Incrementer.Instance.GetSushiCount().ToString();
+        _sushiCountDisplay.text = NumConvert.ToLongNumberdDisplayer(Math.Floor(Incrementer.Instance.GetSushiCount())).ToString();
     }
     public void OnClickEvent()
     {

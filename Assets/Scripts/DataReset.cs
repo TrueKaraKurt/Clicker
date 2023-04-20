@@ -13,6 +13,6 @@ public class DataReset : MonoBehaviour
         OnDataReset?.Invoke();
         Incrementer.Instance.ResetSushiCount();
         AutoAddit.Instance.ResetUpgrades();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

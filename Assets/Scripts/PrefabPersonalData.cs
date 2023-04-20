@@ -10,7 +10,6 @@ public class PrefabPersonalData : MonoBehaviour
     [SerializeField] private int _prefabIndex;
 
     private string _upgradeName;
-    //private Sprite _upgradeIcon;
     private decimal _upgradeBuyPrice;
     private decimal _upgradeProductivity;
     private decimal _priceIncrease;
@@ -19,7 +18,6 @@ public class PrefabPersonalData : MonoBehaviour
     private decimal _currentBuyPrice;
 
     [SerializeField] private TextMeshProUGUI _displayedName;
-    //[SerializeField] private Image _displayedIcon;
     [SerializeField] private TextMeshProUGUI _displayedBuyPrice;
     [SerializeField] private TextMeshProUGUI _displayedProductivity;
     [SerializeField] private TextMeshProUGUI _displayedCount;

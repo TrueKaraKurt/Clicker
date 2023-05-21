@@ -644,8 +644,9 @@ GameObject:
   - component: {fileID: 6620244872097528610}
   - component: {fileID: 491926343311461586}
   - component: {fileID: 6216744956871909355}
+  - component: {fileID: -1275494818324751797}
   m_Layer: 0
-  m_Name: ClickUpgrade
+  m_Name: PowerUps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -723,6 +724,23 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-1275494818324751797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8734110587837245677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd94174936baec42bff158acabf0386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _prefabIndex: 0
+  _displayedName: {fileID: 451370451412145677}
+  _displayedPrice: {fileID: 7544865862172102362}
+  _displayedLevel: {fileID: 5927042561777689159}
+  _displayedDescription: {fileID: 7110031351403197454}
 --- !u!1 &9113396414163630698
 GameObject:
   m_ObjectHideFlags: 0

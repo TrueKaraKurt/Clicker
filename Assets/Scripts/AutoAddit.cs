@@ -17,6 +17,7 @@ public class AutoAddit : MonoBehaviour
     public static event Action<int> OnfirstKnifeCreate;
     
     private int[] _upgradeCount;
+    private int _hashiUpgradeLevel;
 
     public static AutoAddit Instance => _instance;
     private static AutoAddit _instance;
@@ -148,6 +149,7 @@ public class AutoAddit : MonoBehaviour
     private void SaveUpgrade()
     {
         PlayerPrefs.SetString("upgradeCount", CompressString(_upgradeCount));
+        PlayerPrefs.SetInt("hashiUpgradeLvl", _hashiUpgradeLevel);
     }
     private void LoadUpgrade()
     {
@@ -155,7 +157,11 @@ public class AutoAddit : MonoBehaviour
         {
             _upgradeCount = upgradeCount;
         }
-        //Debug.Log("load succsess - " + _upgradeCount);
+        if (PlayerPrefs.GetString("hashiUpgrade") != "")
+        {
+            _hashiUpgradeLevel = Convert.ToInt32(PlayerPrefs.GetString("hashiUpgrade"));
+        }
+        
     }
     public void ResetUpgrades()
     {

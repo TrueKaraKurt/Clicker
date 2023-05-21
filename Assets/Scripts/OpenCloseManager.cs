@@ -5,9 +5,29 @@ using UnityEngine;
 public class OpenCloseManager : MonoBehaviour
 {
     [SerializeField] private GameObject _clickPanel;
-    [SerializeField] private GameObject _upgradePanel;
     [SerializeField] private GameObject _inGameMenuPanel;
     [SerializeField] private GameObject _cheatMenu;
+
+    [SerializeField] private GameObject _upgradesMenu;
+    [SerializeField] private GameObject _powerUpsMenu;
+
+
+    private void OpenUpgradesMenu()
+    {
+        _upgradesMenu.SetActive(true);
+    }
+    private void CloseUpgradesMenu()
+    {
+        _upgradesMenu.SetActive(false);
+    }
+    private void OpenPowerUpsMenu()
+    {
+        _powerUpsMenu.SetActive(true);
+    }
+    private void ClosePowerUpsMenu()
+    {
+        _powerUpsMenu.SetActive(false);
+    }
 
     private void ToggleClickPanel()
     {
@@ -18,17 +38,6 @@ public class OpenCloseManager : MonoBehaviour
         else
         {
             _clickPanel.SetActive(true);
-        }
-    }
-    private void ToggleUpgradePanel()
-    {
-        if (_upgradePanel.activeSelf)
-        {
-            _upgradePanel.SetActive(false);
-        }
-        else
-        {
-            _upgradePanel.SetActive(true);
         }
     }
     private void ToggleInGameMenuPanel()
@@ -53,11 +62,16 @@ public class OpenCloseManager : MonoBehaviour
             _cheatMenu.SetActive(true);
         }
     }
-    public void ToggleKitUpgradePannel()
+
+    public void OnClickUpgradesButton()
     {
-        ToggleClickPanel();
-        ToggleUpgradePanel();
-        ToggleInGameMenuPanel();
+        OpenUpgradesMenu();
+        ClosePowerUpsMenu();
+    }
+    public void OnClickPowerUpsButton()
+    {
+        OpenPowerUpsMenu();
+        CloseUpgradesMenu();
     }
 
     public void ToggleCheatMenu() 

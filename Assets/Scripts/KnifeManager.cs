@@ -162,4 +162,20 @@ public class KnifeManager : MonoBehaviour
             }
         }
     }
+
+    private void KnifeSort()
+    {
+        GameObject knifeBase = GameObject.FindGameObjectWithTag("KnifeBase");
+        List<Transform> knifes = new List<Transform>();
+        foreach (Transform child in knifeBase.transform)
+        {
+            knifes.Add(child);
+        }
+        knifes.Sort((a, b) => (a.GetSiblingIndex() < b.GetSiblingIndex()) ? 1 : -1);
+        foreach (Transform child in knifes)
+        {
+            child.SetAsLastSibling();
+        }
+        Debug.Log("pass");
+    }
 }

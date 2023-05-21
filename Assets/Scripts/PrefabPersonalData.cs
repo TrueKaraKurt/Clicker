@@ -36,8 +36,8 @@ public class PrefabPersonalData : MonoBehaviour
     {
         _currentBuyPrice = CalcActualPrice(_prefabIndex, _upgradeCount);
         _displayedName.text = _upgradeName.ToString();
-        _displayedBuyPrice.text = _currentBuyPrice.ToString("G30");
-        _displayedProductivity.text = _upgradeProductivity.ToString("G30");
+        _displayedBuyPrice.text = NumConvert.ToLongNumberdDisplayer(_currentBuyPrice).ToString();
+        _displayedProductivity.text = NumConvert.ToLongNumberdDisplayer(_upgradeProductivity).ToString();
         _displayedCount.text = _upgradeCount.ToString("G30");
     }
     public void SetUpgradeCount() 

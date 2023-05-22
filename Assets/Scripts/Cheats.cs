@@ -14,7 +14,7 @@ public class Cheats : MonoBehaviour
         temp = _inputSushiCount.text;
         decimal outputSushi;
         outputSushi = Convert.ToDecimal(temp);
-        Incrementer.Instance.IncreaseSushiCount(outputSushi);
+        Incrementer.Instance.IncreaseSushiCount(outputSushi, true);
         _inputSushiCount.text = null;
     }
 }

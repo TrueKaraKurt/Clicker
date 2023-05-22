@@ -2,7 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class PrefabPersonalData : MonoBehaviour
+public class UpgradePersonalData : MonoBehaviour
 {
     [SerializeField] private int _prefabIndex;
 
@@ -14,34 +14,38 @@ public class PrefabPersonalData : MonoBehaviour
 
     private decimal _currentBuyPrice;
 
-    [SerializeField] private TextMeshProUGUI _displayedName;
-    [SerializeField] private TextMeshProUGUI _displayedBuyPrice;
-    [SerializeField] private TextMeshProUGUI _displayedProductivity;
-    [SerializeField] private TextMeshProUGUI _displayedCount;
-    public void Initializer(string upgradeName, decimal upgradeBuyPrice, decimal upgradeProductivity, decimal priceIncrease, int upgradeCount)
-    {
-        _upgradeName = upgradeName;
-        _upgradeBuyPrice = upgradeBuyPrice;
-        _upgradeProductivity = upgradeProductivity;
-        _priceIncrease = priceIncrease;
-        _upgradeCount = upgradeCount;
+    [SerializeField] private TextMeshProUGUI _displayedUpgradeName;
+    [SerializeField] private TextMeshProUGUI _displayedUpgradeBuyPrice;
+    [SerializeField] private TextMeshProUGUI _displayedUpgradeProductivity;
+    [SerializeField] private TextMeshProUGUI _displayedUpgradeCount;
 
-        _currentBuyPrice = _upgradeBuyPrice;
+    private void Start()
+    {
+        Initializer(_prefabIndex);
+        UpdateDataDisplay();
+    }
+    private void Initializer(int index)
+    {
+
+        _upgradeName = Upgrade.updates[index].upgradeName;
+        _upgradeBuyPrice = Upgrade.updates[index].upgradeBuyPrice;
+        _upgradeProductivity = Upgrade.updates[index].upgradeProductivity;
+        _priceIncrease = Upgrade.updates[index].priceIncrease;
+
         SetUpgradeCount();
     }
-    public void UpdateDataDisplay() 
+    private void UpdateDataDisplay() 
     {
         _currentBuyPrice = CalcActualPrice(_prefabIndex, _upgradeCount);
-        _displayedName.text = _upgradeName.ToString();
-        _displayedBuyPrice.text = NumConvert.ToLongNumberdDisplayer(_currentBuyPrice).ToString();
-        _displayedProductivity.text = NumConvert.ToLongNumberdDisplayer(_upgradeProductivity).ToString();
-        _displayedCount.text = _upgradeCount.ToString("G30");
+        _displayedUpgradeName.text = _upgradeName;
+        _displayedUpgradeBuyPrice.text = NumConvert.ToLongNumberdDisplayer(_currentBuyPrice).ToString();
+        _displayedUpgradeProductivity.text = NumConvert.ToLongNumberdDisplayer(_upgradeProductivity).ToString();
+        _displayedUpgradeCount.text = _upgradeCount.ToString("G30");
     }
-    public void SetUpgradeCount() 
+    private void SetUpgradeCount() 
     {
         _upgradeCount = AutoAddit.Instance.GetUpgradeCount(_prefabIndex);
     }
-
     private decimal CalcActualPrice(int index, int upgradeCount)
     {
         decimal temp;

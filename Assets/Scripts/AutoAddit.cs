@@ -10,7 +10,7 @@ public class AutoAddit : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _sushiCountDisplay;
 
     [SerializeField] private Transform _parantPrefab;
-    [SerializeField] private List<PrefabPersonalData> _upgrades;
+    [SerializeField] private List<UpgradePersonalData> _upgrades;
 
     public static event Action OnKnifeUpgradeBuying;
     public static event Action<int> OnfirstKnifeCreate;
@@ -24,14 +24,14 @@ public class AutoAddit : MonoBehaviour
     private void Awake()
     {
         _instance = this;
+
+        Incrementer.Instance.LoadSushiCount();
+        InitializationUpgradeKit();
     }
 
     private void Start()
     {
-        Incrementer.Instance.LoadSushiCount();
-        InitializationUpgradeKit();
         StartCoroutine(AutoSushiGain());
-        DisplayData();
 
         InitKnifeCount();
     }
@@ -49,25 +49,6 @@ public class AutoAddit : MonoBehaviour
     {
         _upgradeCount = new int[Upgrade.updates.Count];
         LoadUpgrade();
-        _upgrades = _parantPrefab.GetComponentsInChildren<PrefabPersonalData>().ToList();
-
-        for (int i = 0; i < _upgrades.Count; i++)
-        {
-            _upgrades[i].Initializer(
-                Upgrade.updates[i].upgradeName,
-                Upgrade.updates[i].upgradeBuyPrice,
-                Upgrade.updates[i].upgradeProductivity,
-                Upgrade.updates[i].priceIncrease,
-                _upgradeCount[i]);
-        }
-    }
-
-    private void DisplayData()
-    {
-        for (int i = 0; i < _upgrades.Count; i++)
-        {
-            _upgrades[i].UpdateDataDisplay();
-        }
     }
     public void AddDataToUpgradeCountArray(int index) 
     {
@@ -99,7 +80,6 @@ public class AutoAddit : MonoBehaviour
         while (true)
         {
             Incrementer.Instance.IncreaseSushiCountPerSec(SushiPerSecond());
-            DisplayData();
             Incrementer.Instance.SaveSushiCount();
             yield return new WaitForSeconds(1);
         }

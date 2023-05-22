@@ -723,7 +723,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 0}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -1275494818324751797}
+        m_TargetAssemblyTypeName: PowerUpsPersonalData, Assembly-CSharp
+        m_MethodName: UpgradeBuying
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-1275494818324751797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,10 +749,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefabIndex: 0
-  _displayedName: {fileID: 451370451412145677}
-  _displayedPrice: {fileID: 7544865862172102362}
-  _displayedLevel: {fileID: 5927042561777689159}
-  _displayedDescription: {fileID: 7110031351403197454}
+  _displayedPowerUpsName: {fileID: 451370451412145677}
+  _displayedPowerUpsPrice: {fileID: 7544865862172102362}
+  _displayedPowerUpsLevel: {fileID: 5927042561777689159}
+  _displayedPowerUpsDescription: {fileID: 7110031351403197454}
 --- !u!1 &9113396414163630698
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,9 +13,12 @@ public class SushiAnimation : MonoBehaviour
         _scaleTo = _scaleFrom * 0.9f;
     }
 
-    public void SushiClickAnimation()
+    public void OnButtonDownSushiAnimation()
     {
-        transform.DOScale(_scaleTo, 0.1f)
-            .OnComplete(()=> transform.DOScale(_scaleFrom, 0.1f));
+        transform.DOScale(_scaleTo, 0.1f);
+    }
+    public void OnButtonUpSushiAnimation()
+    {
+        transform.DOScale(_scaleFrom, 0.1f);
     }
 }

@@ -72,11 +72,11 @@ public class PowerUpsPersonalData : MonoBehaviour
     }
     private void SavePowerUpsLevel()
     {
-        PlayerPrefs.SetInt("powerUpsLevel", _powerUpsLevel);
+        PlayerPrefs.SetInt(_prefabIndex + "powerUpsLevel", _powerUpsLevel);
     }
     private int LoadPowerUpsLevel()
     {
-        return PlayerPrefs.GetInt("powerUpsLevel");
+        return PlayerPrefs.GetInt(_prefabIndex + "powerUpsLevel");
     }
 
     private void SendPowerUpsLevel()

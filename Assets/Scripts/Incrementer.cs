@@ -9,6 +9,8 @@ public class Incrementer : MonoBehaviour
 
     public static Action<int, PowerUps> OnPowerUpsUsage;
 
+    public static event Action<decimal, bool> OnSushiClick;
+
     private decimal _sushiCount;
 
     private int _currentLevelOfClickPower;
@@ -41,7 +43,9 @@ public class Incrementer : MonoBehaviour
         }
 
         inputSishi = (decimal)Math.Pow((double)inputSishi,_currentLevelOfClickPower);
-        _sushiCount+= CritCalculate(inputSishi);
+        decimal currentClick = CritCalculate(inputSishi, out bool isCrit);
+        OnSushiClick?.Invoke(currentClick, isCrit);
+        _sushiCount += currentClick;
         SaveSushiCount();
     }
     public void IncreaseSushiCountPerSec(decimal sushiGain) 
@@ -79,12 +83,14 @@ public class Incrementer : MonoBehaviour
         }
     }
 
-    private decimal CritCalculate(decimal clickPower)
+    private decimal CritCalculate(decimal clickPower, out bool isCrit)
     {
+        isCrit = false;
         if (Random.Range(0, 100) < _currentLevelOfCritChance)
         {
             Debug.Log("Critical Click");
-            return _baseCritPower + 0.5m * _currentLevelOfCritPower;
+            isCrit = true;
+            return clickPower * (_baseCritPower + 0.5m * _currentLevelOfCritPower);
         }
         return clickPower;
     }
@@ -110,3 +116,4 @@ public class Incrementer : MonoBehaviour
         }
     }
 }
+

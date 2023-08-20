@@ -10,7 +10,7 @@ public class KnifeManager : MonoBehaviour
     [SerializeField] private Transform _parentPrefab;
 
     private int _currentNumberOfKnifes;
-    private float _radius = 300f;
+    private float _radius = 400f;
     private Coroutine _pingTiming;
     private List<Sequence> _standsForKnives;
 

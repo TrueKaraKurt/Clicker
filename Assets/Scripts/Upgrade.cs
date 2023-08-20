@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 [Serializable]
 public struct UpgradeData
 {
     public string upgradeName;
     public int upgrareIndex;
-    //public Sprite upgradeIcon;
+    public Sprite upgradeIcon;
     public decimal upgradeBuyPrice;
     public decimal priceIncrease;
     public decimal upgradeProductivity;
@@ -18,9 +19,9 @@ public static class Upgrade
     {
         new UpgradeData
         {
-            upgradeName = "Knife",
+            upgradeName = "Hashi",
             upgrareIndex = 0,
-            //upgradeIcon =  ,
+            upgradeIcon = Resources.Load<Sprite>("Sprites/Hashi") ,
             upgradeBuyPrice = 10,
             priceIncrease = 1.15m,
             upgradeProductivity = 0.1m,

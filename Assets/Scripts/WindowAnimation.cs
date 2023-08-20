@@ -15,12 +15,12 @@ public class WindowAnimation : MonoBehaviour
     }
     public void OnOpenAnimation()
     {
-        transform.DOLocalMove(_endWindowPosition, 1f)
+        transform.DOLocalMove(_endWindowPosition, .75f)
             .SetEase(Ease.InOutCubic);
     }
     public void OnCloseAnimation()
     {
-        transform.DOLocalMove(_startWindowPosition, 1f)
+        transform.DOLocalMove(_startWindowPosition, .75f)
             .SetEase(Ease.InOutCubic);
     }
 }

@@ -1,12 +1,14 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradePersonalData : MonoBehaviour
 {
     [SerializeField] private int _prefabIndex;
 
     private string _upgradeName;
+    private Sprite _upgradeIcon;
     private decimal _upgradeBuyPrice;
     private decimal _upgradeProductivity;
     private decimal _priceIncrease;
@@ -18,6 +20,7 @@ public class UpgradePersonalData : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _displayedUpgradeBuyPrice;
     [SerializeField] private TextMeshProUGUI _displayedUpgradeProductivity;
     [SerializeField] private TextMeshProUGUI _displayedUpgradeCount;
+    [SerializeField] private Sprite _displayedUpgradeIcon;
 
     private void Start()
     {
@@ -31,6 +34,7 @@ public class UpgradePersonalData : MonoBehaviour
         _upgradeBuyPrice = Upgrade.updates[index].upgradeBuyPrice;
         _upgradeProductivity = Upgrade.updates[index].upgradeProductivity;
         _priceIncrease = Upgrade.updates[index].priceIncrease;
+        _upgradeIcon = Upgrade.updates[index].upgradeIcon;
 
         SetUpgradeCount();
     }
@@ -41,6 +45,7 @@ public class UpgradePersonalData : MonoBehaviour
         _displayedUpgradeBuyPrice.text = NumConvert.ToLongNumberdDisplayer(_currentBuyPrice).ToString();
         _displayedUpgradeProductivity.text = NumConvert.ToLongNumberdDisplayer(_upgradeProductivity).ToString();
         _displayedUpgradeCount.text = _upgradeCount.ToString("G30");
+        _displayedUpgradeIcon = _upgradeIcon;    
     }
     private void SetUpgradeCount() 
     {
